@@ -20,6 +20,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { isLoggedIn, logoutUser } from "../helpers/authHelper";
 import UserAvatar from "./UserAvatar";
 import HorizontalStack from "./HorizontalStack";
+import NotificationsDropdown from "./NotificationDropdown";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -120,6 +121,7 @@ const Navbar = () => {
               <IconButton component={Link} to={"/messenger"}>
                 <AiFillMessage />
               </IconButton>
+              <NotificationsDropdown />
               <IconButton component={Link} to={"/users/" + username}>
                 <UserAvatar width={30} height={30} username={user.username} />
               </IconButton>

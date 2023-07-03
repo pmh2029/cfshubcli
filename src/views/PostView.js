@@ -11,6 +11,7 @@ import PostCard from "../components/PostCard";
 import Comments from "../components/Comments";
 import ErrorAlert from "../components/ErrorAlert";
 import Sidebar from "../components/SideBar";
+import NotificationsDropdown from "../components/NotificationDropdown";
 
 const PostView = () => {
   const params = useParams();
@@ -38,6 +39,7 @@ const PostView = () => {
   return (
     <Container>
       <Navbar />
+      <NotificationsDropdown />
       <GoBack />
       <GridLayout
         left={
